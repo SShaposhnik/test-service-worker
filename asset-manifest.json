@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/test-service-worker/static/css/main.7c04092c.chunk.css",
+    "main.css": "/test-service-worker/static/css/main.5c449b98.chunk.css",
     "main.js": "/test-service-worker/static/js/main.23101db5.chunk.js",
     "main.js.map": "/test-service-worker/static/js/main.23101db5.chunk.js.map",
     "runtime-main.js": "/test-service-worker/static/js/runtime-main.c0be44f5.js",
@@ -14,7 +14,7 @@
     "service-worker.js": "/test-service-worker/service-worker.js",
     "service-worker.js.map": "/test-service-worker/service-worker.js.map",
     "static/css/2.7b168c64.chunk.css.map": "/test-service-worker/static/css/2.7b168c64.chunk.css.map",
-    "static/css/main.7c04092c.chunk.css.map": "/test-service-worker/static/css/main.7c04092c.chunk.css.map",
+    "static/css/main.5c449b98.chunk.css.map": "/test-service-worker/static/css/main.5c449b98.chunk.css.map",
     "static/js/2.06bcb912.chunk.js.LICENSE.txt": "/test-service-worker/static/js/2.06bcb912.chunk.js.LICENSE.txt",
     "static/media/onsenui.css": "/test-service-worker/static/media/ionicons.ef35f15c.woff",
     "static/media/logo.103b5fa1.svg": "/test-service-worker/static/media/logo.103b5fa1.svg"
@@ -23,7 +23,7 @@
     "static/js/runtime-main.c0be44f5.js",
     "static/css/2.7b168c64.chunk.css",
     "static/js/2.06bcb912.chunk.js",
-    "static/css/main.7c04092c.chunk.css",
+    "static/css/main.5c449b98.chunk.css",
     "static/js/main.23101db5.chunk.js"
   ]
 }
