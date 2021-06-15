@@ -19,7 +19,7 @@ clientsClaim();
 // Their URLs are injected into the manifest variable below.
 // This variable must be present somewhere in your service worker file,
 // even if you decide not to use precaching. See https://cra.link/PWA
-precacheAndRoute([{"revision":"0789caf7d893b9135e8b86e3989b1dd7","url":"index.html"},{"revision":"33dbdd0177549353eeeb785d02c294af","url":"logo192.png"},{"revision":"917515db74ea8d1aee6a246cfbcc0b45","url":"logo512.png"},{"revision":"decc4d2ce185d3c5be6c7c89ec4395c4","url":"service-worker.js"},{"revision":"a5e43367aa8e4159a8cf0bf407048d89","url":"static/css/2.7b168c64.chunk.css"},{"revision":"bf577bf3ecc7ec6a257c3c6cadb6ed61","url":"static/css/main.5c449b98.chunk.css"},{"revision":"dbd09ed649a19cf879ac8f4d982078be","url":"static/js/2.06bcb912.chunk.js"},{"revision":"6bf9de76b971e724998ddf47876d8a47","url":"static/js/3.5149fe68.chunk.js"},{"revision":"9c691fa5c9b4dbbdfd0a9912559c5894","url":"static/js/main.23101db5.chunk.js"},{"revision":"d9c9501425eca14d2d64dea020e0fd05","url":"static/js/runtime-main.c0be44f5.js"}]);
+precacheAndRoute([{"revision":"d6cc719a2e1ed4843bbaf09a60c36c9b","url":"index.html"},{"revision":"33dbdd0177549353eeeb785d02c294af","url":"logo192.png"},{"revision":"917515db74ea8d1aee6a246cfbcc0b45","url":"logo512.png"},{"revision":"a39863943f7136c04441162f0a6d831f","url":"service-worker.js"},{"revision":"a5e43367aa8e4159a8cf0bf407048d89","url":"static/css/2.7b168c64.chunk.css"},{"revision":"a0159fc556f1b39ef0cf606dc2c269a9","url":"static/css/main.338064ad.chunk.css"},{"revision":"dbd09ed649a19cf879ac8f4d982078be","url":"static/js/2.06bcb912.chunk.js"},{"revision":"6bf9de76b971e724998ddf47876d8a47","url":"static/js/3.5149fe68.chunk.js"},{"revision":"9c691fa5c9b4dbbdfd0a9912559c5894","url":"static/js/main.23101db5.chunk.js"},{"revision":"d9c9501425eca14d2d64dea020e0fd05","url":"static/js/runtime-main.c0be44f5.js"}]);
 
 // Set up App Shell-style routing, so that all navigation requests
 // are fulfilled with your index.html shell. Learn more at
@@ -65,14 +65,12 @@ registerRoute(
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
 self.addEventListener('message', async (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
-    if (event.data === 'SKIP_WAITING') {
-      try {
-        await self.skipWaiting()
-        const clients = await self.clients.matchAll()
-        clients.forEach(client => client.postMessage('reload-window'))
-      } catch (e) {
-        console.info(e)
-      }
+    try {
+      await self.skipWaiting()
+      const clients = await self.clients.matchAll()
+      clients.forEach(client => client.postMessage('reload-window'))
+    } catch (e) {
+      console.info(e)
     }
   }
 });
