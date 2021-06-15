@@ -5,8 +5,8 @@ const { injectManifest } = require('workbox-build');
 const buildSW = () => {
   return injectManifest({
     swSrc: 'src/service-worker.js', // this is your sw template file
-    swDest: 'public/sw.js', // this will be created in the build step
-    globDirectory: '.',
+    swDest: 'build/sw.js', // this will be created in the build step
+    globDirectory: 'build/',
     globPatterns: [
       '**/*.{js,css,html,png}',
     ]

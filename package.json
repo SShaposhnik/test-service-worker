@@ -1,12 +1,13 @@
 {
-  "name": "test-sw",
+  "name": "awesome-service-worker",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://SShaposhnik.github.io/awesome-service-worker",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "gh-pages": "^3.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -29,7 +30,9 @@
     "build": "react-scripts build && npm run build-sw",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-sw": "node ./src/buildSW.js"
+    "build-sw": "node ./src/buildSW.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
