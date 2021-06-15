@@ -19,7 +19,7 @@ clientsClaim();
 // Their URLs are injected into the manifest variable below.
 // This variable must be present somewhere in your service worker file,
 // even if you decide not to use precaching. See https://cra.link/PWA
-precacheAndRoute([{"revision":"74979e056859d2f4acad0b0f4cc7f684","url":"index.html"},{"revision":"33dbdd0177549353eeeb785d02c294af","url":"logo192.png"},{"revision":"917515db74ea8d1aee6a246cfbcc0b45","url":"logo512.png"},{"revision":"9566b3be583df6118046e5f2afba0a32","url":"service-worker.js"},{"revision":"a5e43367aa8e4159a8cf0bf407048d89","url":"static/css/2.7b168c64.chunk.css"},{"revision":"a549739acf8a10322af178e2ccd7dded","url":"static/css/main.00434718.chunk.css"},{"revision":"dbd09ed649a19cf879ac8f4d982078be","url":"static/js/2.06bcb912.chunk.js"},{"revision":"6bf9de76b971e724998ddf47876d8a47","url":"static/js/3.5149fe68.chunk.js"},{"revision":"56c27d83b3e4596656d3920c9b383d0e","url":"static/js/main.0ff70151.chunk.js"},{"revision":"d9c9501425eca14d2d64dea020e0fd05","url":"static/js/runtime-main.c0be44f5.js"}]);
+precacheAndRoute([{"revision":"a097d4108c0535210a588f3e817c9458","url":"index.html"},{"revision":"33dbdd0177549353eeeb785d02c294af","url":"logo192.png"},{"revision":"917515db74ea8d1aee6a246cfbcc0b45","url":"logo512.png"},{"revision":"f7333cc69ce87299119527e43f5b5f81","url":"service-worker.js"},{"revision":"a5e43367aa8e4159a8cf0bf407048d89","url":"static/css/2.7b168c64.chunk.css"},{"revision":"623209e1848445d771a91599b64b22fc","url":"static/css/main.0dfa5cc2.chunk.css"},{"revision":"dbd09ed649a19cf879ac8f4d982078be","url":"static/js/2.06bcb912.chunk.js"},{"revision":"6bf9de76b971e724998ddf47876d8a47","url":"static/js/3.5149fe68.chunk.js"},{"revision":"3198d19f1ff239ed3efee985bbd746c1","url":"static/js/main.99275de1.chunk.js"},{"revision":"d9c9501425eca14d2d64dea020e0fd05","url":"static/js/runtime-main.c0be44f5.js"}]);
 
 // Set up App Shell-style routing, so that all navigation requests
 // are fulfilled with your index.html shell. Learn more at
@@ -64,8 +64,6 @@ registerRoute(
 // This allows the web app to trigger skipWaiting via
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
 self.addEventListener('message', async (event) => {
-  console.log('addEventListener event', event);
-
   if (event.data && event.data.type === 'SKIP_WAITING') {
     try {
       await self.skipWaiting()
