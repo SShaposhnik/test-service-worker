@@ -19,7 +19,7 @@ clientsClaim();
 // Their URLs are injected into the manifest variable below.
 // This variable must be present somewhere in your service worker file,
 // even if you decide not to use precaching. See https://cra.link/PWA
-precacheAndRoute([{"revision":"811a7235aba24c2132910c7ca903b5f6","url":"index.html"},{"revision":"33dbdd0177549353eeeb785d02c294af","url":"logo192.png"},{"revision":"917515db74ea8d1aee6a246cfbcc0b45","url":"logo512.png"},{"revision":"757b4a911a19ef80328fa8d62e7f79d2","url":"service-worker.js"},{"revision":"a5e43367aa8e4159a8cf0bf407048d89","url":"static/css/2.7b168c64.chunk.css"},{"revision":"a549739acf8a10322af178e2ccd7dded","url":"static/css/main.00434718.chunk.css"},{"revision":"dbd09ed649a19cf879ac8f4d982078be","url":"static/js/2.06bcb912.chunk.js"},{"revision":"6bf9de76b971e724998ddf47876d8a47","url":"static/js/3.5149fe68.chunk.js"},{"revision":"e0956867d430c7b229f17673bf4faf42","url":"static/js/main.c8ce4595.chunk.js"},{"revision":"d9c9501425eca14d2d64dea020e0fd05","url":"static/js/runtime-main.c0be44f5.js"}]);
+precacheAndRoute([{"revision":"74979e056859d2f4acad0b0f4cc7f684","url":"index.html"},{"revision":"33dbdd0177549353eeeb785d02c294af","url":"logo192.png"},{"revision":"917515db74ea8d1aee6a246cfbcc0b45","url":"logo512.png"},{"revision":"9566b3be583df6118046e5f2afba0a32","url":"service-worker.js"},{"revision":"a5e43367aa8e4159a8cf0bf407048d89","url":"static/css/2.7b168c64.chunk.css"},{"revision":"a549739acf8a10322af178e2ccd7dded","url":"static/css/main.00434718.chunk.css"},{"revision":"dbd09ed649a19cf879ac8f4d982078be","url":"static/js/2.06bcb912.chunk.js"},{"revision":"6bf9de76b971e724998ddf47876d8a47","url":"static/js/3.5149fe68.chunk.js"},{"revision":"56c27d83b3e4596656d3920c9b383d0e","url":"static/js/main.0ff70151.chunk.js"},{"revision":"d9c9501425eca14d2d64dea020e0fd05","url":"static/js/runtime-main.c0be44f5.js"}]);
 
 // Set up App Shell-style routing, so that all navigation requests
 // are fulfilled with your index.html shell. Learn more at
@@ -77,6 +77,6 @@ self.addEventListener('message', async (event) => {
   }
 });
 
-self.skipWaiting().then((data) => console.log(data))
+self.skipWaiting();
 
 // Any other custom service worker logic can go here.
